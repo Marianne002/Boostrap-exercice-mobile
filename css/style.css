@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Structure de l'interface*/
+*{box-sizing: border-box;}
+#container{
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    max-width: 600px;
+    margin: auto;
+    /*border: 2px solid red;*/
+}
+.box{
+    padding: 20px;
+}
+.row{
+    margin:auto;
+}
+
+/*Bordure qui soulignent les titres*/
+.borders{
+    background-color:#D53C3A;
+    height: 2px;
+    width: 25%;
+    margin-bottom: 5px;
+}
+
+/*Header*/
+header{
+    background-color: #71A32F;
+}
+
+/*Footer*/
+footer{
+    background-color: #004118;
+}
+footer p, footer h5{
+    color: white;
+}
+
+/*Localisation*/
+/*Div : Carré Adresse*/
+.localisation{
+    position: relative;
+}
+.adresse{
+    position: absolute;
+    right: 40px;
+    background-color:#004118;
+    height: 169px;
+    width: 169px;
+    padding-top: 2px;
+    border-radius: 10px;
+    box-shadow:4px 4px 8px #004118;
+}
+
+/*Images*/
+/*Picto*/
+.bi-geo-alt-fill,.bi-caret-left-fill,.bi-caret-right-fill{
+    color: white;
+}
+/*Logos*/
+.logo{
+    position: relative;
+    top: -65px; 
+}
+.logo-bot{
+    position: relative;
+    top: -65px; 
+}
+
+/*Textes*/
+h4,h5,p{
+    font-family: 'Poppins', sans-serif;
+}
+h4{
+    color: #D74644;
+    font-weight: 500;
+}
+h5:not(.titre){
+    color: #71A32F;
+}
+p:not(.black){
+    color: #fff;
+}
+.green{
+    color: #71A32F;
+}
+.dark-green{
+    color: #004118;
+}
+.extra-light{
+    font-weight: 200;
+}
+.light{
+    font-weight: 300;
+}
+.regular{
+    font-weight: 400;
+}
+.medium{
+    font-weight:500;
+}
+
+/*Menu hamburger*/
+.offcanvas-body ul > li > a > p{
+    border: 0;
+    text-decoration: none;
+    color: #004118;
+    text-align: center;
+}
+.offcanvas-body ul > li.active > a:before,
+.offcanvas-body ul > li:hover > a:before {
+    background: #004118;
+    color: #fff;
+}
+.offcanvas-body ul > li.active > a > p,
+.offcanvas-body ul > li:hover > a > p{
+    color: #fff;
+}
+
+/*Liens*/
+nav.réseaux ul li{
+    padding: 0; 
+    margin: 0px; 
+    list-style: none; 
+    display: inline-block;
+}
+
+/*Boutons : Nav et Réseaux*/
+.nav-link button:not(.home), .reseaux button{
+    background-color: none;
+    color: white;
+}
+.nav-link button:hover:not(.home){
+    background-color: none;
+    color: #004118;
+}
+.reseaux button:hover{
+    background-color: none;
+    color: #71A32F;
+}
+/*Boutons Accueil : Header et Footer*/
+.home button{
+    background-color: none;
+    color: #004118;
+}
+.home button:hover{
+    background-color: none;
+    color: white;
+}
+/*Boutons : Carousels*/
+.carousel-control-prev-picto,.carousel-control-next-picto{
+    background-color: #004118;
+    padding: 6px 10px 8px 10px;
+    border-radius: 100%;
+    box-shadow:4px 4px 8px #004118;
+}
+/*Boutons: Textes centré*/
+span {
+    display: block; 
+    text-align: center; 
+} 
+/*Boutons : Carousel Produit-Favori*/
+.carousel-indicators{
+    background-color: #D74644;
+    background-clip: padding-box;
+    border-bottom: 10px solid transparent;
+}
+/*Boutons : Locaslisation Barre de recherche*/
+.form-control{
+    border-radius: 10px;
+    box-shadow:4px 4px 15px #004118;
+}
+.btn-success{
+    background-color: #004118;
+    border-radius: 10px;
+    box-shadow:-4px 4px 8px #004118;
+}
+
+/*Version : Impression sans les éléments suivants : les menu, le footer et les images*/
+@media print {
+    img, nav, footer{
+        display: none;
+    }
+}
